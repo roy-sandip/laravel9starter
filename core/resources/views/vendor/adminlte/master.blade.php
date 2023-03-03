@@ -73,7 +73,7 @@
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="{{ asset('favicon/ms-icon-144x144.png') }}">
     @endif
-
+    
 </head>
 
 <body class="@yield('classes_body')" @yield('body_data')>
@@ -104,6 +104,13 @@
         @endif
     @endif
 
+    <script>
+         $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
     {{-- Custom Scripts --}}
     @yield('adminlte_js')
 

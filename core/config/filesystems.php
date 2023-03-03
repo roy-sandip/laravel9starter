@@ -36,6 +36,12 @@ return [
             'throw' => false,
         ],
 
+        'dhl' => [
+            'driver' => 'local',
+            'root' => storage_path('app/dhl'),
+            'throw' => false,
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

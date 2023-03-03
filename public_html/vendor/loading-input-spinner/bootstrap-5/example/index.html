@@ -1,0 +1,2184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>bootstrap-input-spinner</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="bootstrap.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container-fluid js-toc-content">
+      <h1>bootstrap-input-spinner</h1>
+
+      <div class="js-toc"></div>
+
+      <div class="mb-3 form-check">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="debug-mode"
+          onclick="toggleDebugMode()"
+        />
+        <label class="form-check-label" for="debug-mode">Debug Mode</label>
+      </div>
+
+      <h2 id="input">input</h2>
+
+      <div class="mb-3">
+        <input class="form-control is-valid" placeholder="is-valid" />
+      </div>
+
+      <h3 id="input-sm">sm</h3>
+
+      <div class="mb-3 is-loading">
+        <input class="form-control" placeholder="spinner-border spinner-border-sm" />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input class="form-control" placeholder="spinner-border spinner-border-sm text-warning" />
+        <div class="spinner-border spinner-border-sm text-warning"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control"
+          placeholder="disabled spinner-border spinner-border-sm"
+          disabled
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control"
+          placeholder="readonly spinner-border spinner-border-sm"
+          readonly
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control"
+          placeholder="disabled spinner-border spinner-border-sm text-warning"
+          disabled
+        />
+        <div class="spinner-border spinner-border-sm text-warning"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control"
+          placeholder="readonly spinner-border spinner-border-sm text-warning"
+          readonly
+        />
+        <div class="spinner-border spinner-border-sm text-warning"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control is-valid"
+          placeholder="is-valid spinner-border spinner-border-sm"
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control is-invalid"
+          placeholder="is-invalid spinner-border spinner-border-sm"
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control is-valid"
+          placeholder="is-valid disabled spinner-border spinner-border-sm"
+          disabled
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control is-valid"
+          placeholder="is-valid readonly spinner-border spinner-border-sm"
+          readonly
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control is-invalid"
+          placeholder="is-invalid disabled spinner-border spinner-border-sm"
+          disabled
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control is-invalid"
+          placeholder="is-invalid readonly spinner-border spinner-border-sm"
+          readonly
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3 id="input-lg">lg</h3>
+
+      <div class="mb-3 is-loading">
+        <input class="form-control" placeholder="spinner-border" />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input class="form-control" placeholder="disabled spinner-border" disabled />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input class="form-control" placeholder="readonly spinner-border" readonly />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input class="form-control is-valid" placeholder="is-valid spinner-border" />
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2 id="input-label">input + label</h2>
+
+      <div class="mb-3">
+        <label for="input-label-1">Label</label>
+        <input id="input-label-1" class="form-control is-valid" placeholder="is-valid" />
+      </div>
+
+      <h3>sm</h3>
+
+      <div class="mb-3">
+        <label for="input-label-sm">Label</label>
+        <div class="is-loading">
+          <input
+            id="input-label-sm"
+            class="form-control"
+            placeholder="spinner-border spinner-border-sm"
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="input-label-sm-is-valid">Label</label>
+        <div class="is-loading">
+          <input
+            id="input-label-sm-is-valid"
+            class="form-control is-valid"
+            placeholder="is-valid spinner-border spinner-border-sm"
+          />
+          <div class="spinner-border spinner-border-sm-is-valid"></div>
+        </div>
+      </div>
+
+      <h3>lg</h3>
+
+      <div class="mb-3">
+        <label for="input-label-lg">Label</label>
+        <div class="is-loading">
+          <input id="input-label-lg" class="form-control" placeholder="spinner-border" />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="input-label-lg-is-valid">Label</label>
+        <div class="is-loading">
+          <input
+            id="input-label-lg-is-valid"
+            class="form-control is-valid"
+            placeholder="is-valid spinner-border"
+          />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <h2 id="input-floating-label">input + @tkrotoff/bootstrap-floating-label</h2>
+
+      <div class="mb-3 floating-label">
+        <input id="input-floating-label-1" class="form-control is-valid" placeholder="is-valid" />
+        <label for="input-floating-label-1">Label</label>
+      </div>
+
+      <h3>sm</h3>
+
+      <div class="mb-3 floating-label is-loading">
+        <input
+          id="input-floating-label-sm"
+          class="form-control"
+          placeholder="spinner-border spinner-border-sm"
+        />
+        <label for="input-floating-label-sm">Label</label>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 floating-label is-loading">
+        <input
+          id="input-floating-label-sm-is-valid"
+          class="form-control is-valid"
+          placeholder="is-valid spinner-border spinner-border-sm"
+        />
+        <label for="input-floating-label-sm-is-valid">Label</label>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3>lg</h3>
+
+      <div class="mb-3 floating-label is-loading">
+        <input id="input-floating-label-lg" class="form-control" placeholder="spinner-border" />
+        <label for="input-floating-label-lg">Label</label>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 floating-label is-loading">
+        <input
+          id="input-floating-label-lg-is-valid"
+          class="form-control is-valid"
+          placeholder="is-valid spinner-border"
+        />
+        <label for="input-floating-label-lg-is-valid">Label</label>
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2 id="spinner-grow">spinner-grow</h2>
+
+      <h3 id="spinner-grow-sm">sm</h3>
+
+      <div class="mb-3 is-loading">
+        <input class="form-control" placeholder="spinner-grow spinner-grow-sm" />
+        <div class="spinner-grow"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input class="form-control" placeholder="disabled spinner-grow spinner-grow-sm" disabled />
+        <div class="spinner-grow"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input class="form-control" placeholder="readonly spinner-grow spinner-grow-sm" readonly />
+        <div class="spinner-grow"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input class="form-control is-valid" placeholder="is-valid spinner-grow spinner-grow-sm" />
+        <div class="spinner-grow"></div>
+      </div>
+
+      <h3 id="spinner-grow-lg">lg</h3>
+
+      <div class="mb-3 is-loading">
+        <input class="form-control" placeholder="spinner-grow" />
+        <div class="spinner-grow"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input class="form-control" placeholder="disabled spinner-grow" disabled />
+        <div class="spinner-grow"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input class="form-control" placeholder="readonly spinner-grow" readonly />
+        <div class="spinner-grow"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input class="form-control is-valid" placeholder="is-valid spinner-grow" />
+        <div class="spinner-grow"></div>
+      </div>
+
+      <h2 id="textarea">textarea</h2>
+
+      <div class="mb-3">
+        <textarea class="form-control is-valid" placeholder="is-valid"></textarea>
+      </div>
+
+      <h3 id="textarea-sm">sm</h3>
+
+      <div class="mb-3 is-loading">
+        <textarea class="form-control" placeholder="spinner-border spinner-border-sm"></textarea>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <textarea
+          class="form-control"
+          placeholder="disabled spinner-border spinner-border-sm"
+          disabled
+        ></textarea>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <textarea
+          class="form-control"
+          placeholder="readonly spinner-border spinner-border-sm"
+          readonly
+        ></textarea>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <textarea
+          class="form-control is-valid"
+          placeholder="is-valid spinner-border spinner-border-sm"
+        ></textarea>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3 id="textarea-sm-rows1">sm + rows='1'</h3>
+
+      <div class="mb-3 is-loading">
+        <textarea class="form-control" rows="1" placeholder="rows='1'"></textarea>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3 id="textarea-lg">lg</h3>
+
+      <div class="mb-3 is-loading">
+        <textarea class="form-control" placeholder="spinner-border"></textarea>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <textarea class="form-control" placeholder="disabled spinner-border" disabled></textarea>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <textarea class="form-control" placeholder="readonly spinner-border" readonly></textarea>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <textarea class="form-control is-valid" placeholder="is-valid spinner-border"></textarea>
+        <div class="spinner-border"></div>
+      </div>
+
+      <h3 id="textarea-lg-rows1">lg + rows='1'</h3>
+
+      <div class="mb-3 is-loading">
+        <textarea class="form-control" rows="1" placeholder="rows='1'"></textarea>
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2 id="select">select (can be broken, use form-select instead)</h2>
+
+      <div class="mb-3">
+        <select class="form-control is-valid">
+          <option>is-valid</option>
+        </select>
+      </div>
+
+      <h3 id="select-sm">sm</h3>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control">
+          <option>spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control" disabled>
+          <option>disabled spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control is-valid">
+          <option>is-valid spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3 id="select-lg">lg</h3>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control">
+          <option>spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control" disabled>
+          <option>disabled spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control is-valid">
+          <option>is-valid spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2 id="select-multiple">select multiple (can be broken, use form-select instead)</h2>
+
+      <div class="mb-3">
+        <select class="form-control is-valid" multiple>
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+        </select>
+      </div>
+
+      <h3 id="select-multiple-sm">sm</h3>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control" multiple>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control" multiple disabled>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control is-valid" multiple>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3 id="select-multiple-lg">lg</h3>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control" multiple>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control" multiple disabled>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control is-valid" multiple>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2 id="select-size1">select size="1" (can be broken, use form-select instead)</h2>
+
+      <div class="mb-3">
+        <select class="form-control is-valid" size="1">
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+        </select>
+      </div>
+
+      <h3 id="select-size1-sm">sm</h3>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control" size="1">
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control" size="1" disabled>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control is-valid" size="1">
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3 id="select-size1-lg">lg</h3>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control" size="1">
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control" size="1" disabled>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control is-valid" size="1">
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2 id="select-size1-multiple">
+        select size="1" multiple (can be broken, use form-select instead)
+      </h2>
+
+      <div class="mb-3">
+        <select class="form-control is-valid" size="1" multiple>
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+        </select>
+      </div>
+
+      <h3 id="select-size1-multiple-sm">sm</h3>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control" size="1" multiple>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control" size="1" multiple disabled>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control is-valid" size="1" multiple>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3 id="select-size1-multiple-lg">lg</h3>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control" size="1" multiple>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control" size="1" multiple disabled>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control is-valid" size="1" multiple>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2 id="select-size2">select size="2" (can be broken, use form-select instead)</h2>
+
+      <div class="mb-3">
+        <select class="form-control is-valid" size="2">
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+        </select>
+      </div>
+
+      <h3 id="select-size2-sm">sm</h3>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control" size="2">
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control" size="2" disabled>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control is-valid" size="2">
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3 id="select-size2-lg">lg</h3>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control" size="2">
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control" size="2" disabled>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-control is-valid" size="2">
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2 id="form-select">form-select</h2>
+
+      <div class="mb-3">
+        <select class="form-select is-valid">
+          <option>is-valid</option>
+        </select>
+      </div>
+
+      <h3 id="form-select-sm">sm</h3>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select">
+          <option>spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select" disabled>
+          <option>disabled spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select is-valid">
+          <option>is-valid spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3 id="form-select-lg">lg</h3>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select">
+          <option>spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select" disabled>
+          <option>disabled spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select is-valid">
+          <option>is-valid spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2 id="form-select-multiple">form-select multiple</h2>
+
+      <div class="mb-3">
+        <select class="form-select is-valid" multiple>
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+        </select>
+      </div>
+
+      <h3 id="form-select-multiple-sm">sm</h3>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select" multiple>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select" multiple disabled>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select is-valid" multiple>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3 id="form-select-multiple-lg">lg</h3>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select" multiple>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select" multiple disabled>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select is-valid" multiple>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2 id="form-select-size1">form-select size="1"</h2>
+
+      <div class="mb-3">
+        <select class="form-select is-valid" size="1">
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+        </select>
+      </div>
+
+      <h3 id="form-select-size1-sm">sm</h3>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select" size="1">
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select" size="1" disabled>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select is-valid" size="1">
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3 id="form-select-size1-lg">lg</h3>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select" size="1">
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select" size="1" disabled>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select is-valid" size="1">
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2 id="form-select-size1-multiple">form-select size="1" multiple</h2>
+
+      <div class="mb-3">
+        <select class="form-select is-valid" size="1" multiple>
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+        </select>
+      </div>
+
+      <h3 id="form-select-size1-multiple-sm">sm</h3>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select" size="1" multiple>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select" size="1" multiple disabled>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select is-valid" size="1" multiple>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3 id="form-select-size1-multiple-lg">lg</h3>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select" size="1" multiple>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select" size="1" multiple disabled>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select is-valid" size="1" multiple>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2 id="form-select-size2">form-select size="2"</h2>
+
+      <div class="mb-3">
+        <select class="form-select is-valid" size="2">
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+          <option>is-valid</option>
+        </select>
+      </div>
+
+      <h3 id="form-select-size2-sm">sm</h3>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select" size="2">
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+          <option>spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select" size="2" disabled>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+          <option>disabled spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select is-valid" size="2">
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+          <option>is-valid spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3 id="form-select-size2-lg">lg</h3>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select" size="2">
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+          <option>spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select" size="2" disabled>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+          <option>disabled spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <select class="form-select is-valid" size="2">
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+          <option>is-valid spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2 id="form-control-sm">form-control-sm</h2>
+
+      <div class="mb-3">
+        <input
+          class="form-control form-control-sm is-valid"
+          placeholder="form-control-sm is-valid"
+        />
+      </div>
+
+      <h3 id="form-control-sm-sm">sm</h3>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control form-control-sm"
+          placeholder="form-control-sm spinner-border spinner-border-sm"
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control form-control-sm"
+          placeholder="form-control-sm disabled spinner-border spinner-border-sm"
+          disabled
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control form-control-sm"
+          placeholder="form-control-sm readonly spinner-border spinner-border-sm"
+          readonly
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control form-control-sm is-valid"
+          placeholder="form-control-sm is-valid spinner-border spinner-border-sm"
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3 id="form-control-sm-lg">lg</h3>
+
+      <div class="mb-3 is-loading">
+        <input class="form-control form-control-sm" placeholder="form-control-sm spinner-border" />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control form-control-sm"
+          placeholder="form-control-sm disabled spinner-border"
+          disabled
+        />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control form-control-sm"
+          placeholder="form-control-sm readonly spinner-border"
+          readonly
+        />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control form-control-sm is-valid"
+          placeholder="form-control-sm is-valid spinner-border"
+        />
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2 id="form-control-lg">form-control-lg</h2>
+
+      <div class="mb-3">
+        <input
+          class="form-control form-control-lg is-valid"
+          placeholder="form-control-lg is-valid"
+        />
+      </div>
+
+      <h3 id="form-control-lg-sm">sm</h3>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control form-control-lg"
+          placeholder="form-control-lg spinner-border spinner-border-sm"
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control form-control-lg"
+          placeholder="form-control-lg disabled spinner-border spinner-border-sm"
+          disabled
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control form-control-lg"
+          placeholder="form-control-lg readonly spinner-border spinner-border-sm"
+          readonly
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control form-control-lg is-valid"
+          placeholder="form-control-lg is-valid spinner-border spinner-border-sm"
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3 id="form-control-lg-lg">lg</h3>
+
+      <div class="mb-3 is-loading">
+        <input class="form-control form-control-lg" placeholder="form-control-lg spinner-border" />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control form-control-lg"
+          placeholder="form-control-lg disabled spinner-border"
+          disabled
+        />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control form-control-lg"
+          placeholder="form-control-lg readonly spinner-border"
+          readonly
+        />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control form-control-lg is-valid"
+          placeholder="form-control-lg is-valid spinner-border"
+        />
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2 id="form-control-plaintext">form-control-plaintext</h2>
+
+      <div class="mb-3">
+        <input
+          class="form-control-plaintext is-valid"
+          placeholder="form-control-plaintext is-valid"
+        />
+      </div>
+
+      <h3 id="form-control-plaintext-sm">sm</h3>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control-plaintext"
+          placeholder="form-control-plaintext spinner-border spinner-border-sm"
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control-plaintext"
+          placeholder="form-control-plaintext disabled spinner-border spinner-border-sm"
+          disabled
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control-plaintext"
+          placeholder="form-control-plaintext readonly spinner-border spinner-border-sm"
+          readonly
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control-plaintext is-valid"
+          placeholder="form-control-plaintext is-valid spinner-border spinner-border-sm"
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3 id="form-control-plaintext-lg">lg</h3>
+
+      <div class="mb-3 is-loading">
+        <input class="form-control-plaintext" placeholder="form-control-plaintext spinner-border" />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control-plaintext"
+          placeholder="form-control-plaintext disabled spinner-border"
+          disabled
+        />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control-plaintext"
+          placeholder="form-control-plaintext readonly spinner-border"
+          readonly
+        />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="mb-3 is-loading">
+        <input
+          class="form-control-plaintext is-valid"
+          placeholder="form-control-plaintext is-valid spinner-border"
+        />
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2 id="input-group-prepend">input-group prepend</h2>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text">prepend</span>
+          <input class="form-control is-valid" placeholder="is-valid" />
+        </div>
+      </div>
+
+      <h3 id="input-group-prepend-sm">sm</h3>
+
+      <div class="mb-3">
+        <div class="input-group is-loading">
+          <span class="input-group-text">prepend</span>
+          <input class="form-control" placeholder="spinner-border spinner-border-sm" />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group is-loading">
+          <span class="input-group-text">prepend</span>
+          <input
+            class="form-control"
+            placeholder="disabled spinner-border spinner-border-sm"
+            disabled
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group is-loading">
+          <span class="input-group-text">prepend</span>
+          <input
+            class="form-control"
+            placeholder="readonly spinner-border spinner-border-sm"
+            readonly
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group is-loading">
+          <span class="input-group-text">prepend</span>
+          <input
+            class="form-control is-valid"
+            placeholder="is-valid spinner-border spinner-border-sm"
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <h3 id="input-group-prepend-lg">lg</h3>
+
+      <div class="mb-3">
+        <div class="input-group is-loading">
+          <span class="input-group-text">prepend</span>
+          <input class="form-control" placeholder="spinner-border" />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group is-loading">
+          <span class="input-group-text">prepend</span>
+          <input class="form-control" placeholder="disabled spinner-border" disabled />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group is-loading">
+          <span class="input-group-text">prepend</span>
+          <input class="form-control" placeholder="readonly spinner-border" readonly />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group is-loading">
+          <span class="input-group-text">prepend</span>
+          <input class="form-control is-valid" placeholder="is-valid spinner-border" />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <h2 id="input-group-append">input-group append</h2>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <input class="form-control is-valid" placeholder="is-valid" />
+          <span class="input-group-text">append</span>
+        </div>
+      </div>
+
+      <h3 id="input-group-append-sm">sm</h3>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <div class="is-loading">
+            <input class="form-control" placeholder="spinner-border spinner-border-sm" />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <span class="input-group-text">append</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <div class="is-loading">
+            <input
+              class="form-control"
+              placeholder="disabled spinner-border spinner-border-sm"
+              disabled
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <span class="input-group-text">append</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <div class="is-loading">
+            <input
+              class="form-control"
+              placeholder="readonly spinner-border spinner-border-sm"
+              readonly
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <span class="input-group-text">append</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <div class="is-loading">
+            <input
+              class="form-control is-valid"
+              placeholder="is-valid spinner-border spinner-border-sm"
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <span class="input-group-text">append</span>
+        </div>
+      </div>
+
+      <h3 id="input-group-append-lg">lg</h3>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <div class="is-loading">
+            <input class="form-control" placeholder="spinner-border" />
+            <div class="spinner-border"></div>
+          </div>
+          <span class="input-group-text">append</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <div class="is-loading">
+            <input class="form-control" placeholder="disabled spinner-border" disabled />
+            <div class="spinner-border"></div>
+          </div>
+          <span class="input-group-text">append</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <div class="is-loading">
+            <input class="form-control" placeholder="readonly spinner-border" readonly />
+            <div class="spinner-border"></div>
+          </div>
+          <span class="input-group-text">append</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <div class="is-loading">
+            <input class="form-control is-valid" placeholder="is-valid spinner-border" />
+            <div class="spinner-border"></div>
+          </div>
+          <span class="input-group-text">append</span>
+        </div>
+      </div>
+
+      <h2 id="input-group-prepend-append">input-group prepend + input-group append</h2>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text">prepend</span>
+          <input class="form-control is-valid" placeholder="is-valid" />
+          <span class="input-group-text">append</span>
+        </div>
+      </div>
+
+      <h3 id="input-group-prepend-append-sm">sm</h3>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text">prepend</span>
+          <div class="is-loading">
+            <input class="form-control" placeholder="spinner-border spinner-border-sm" />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <span class="input-group-text">append</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text">prepend</span>
+          <div class="is-loading">
+            <input
+              class="form-control"
+              placeholder="disabled spinner-border spinner-border-sm"
+              disabled
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <span class="input-group-text">append</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text">prepend</span>
+          <div class="is-loading">
+            <input
+              class="form-control"
+              placeholder="readonly spinner-border spinner-border-sm"
+              readonly
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <span class="input-group-text">append</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text">prepend</span>
+          <div class="is-loading">
+            <input
+              class="form-control is-valid"
+              placeholder="is-valid spinner-border spinner-border-sm"
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <span class="input-group-text">append</span>
+        </div>
+      </div>
+
+      <h3 id="input-group-prepend-append-lg">lg</h3>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text">prepend</span>
+          <div class="is-loading">
+            <input class="form-control" placeholder="spinner-border" />
+            <div class="spinner-border"></div>
+          </div>
+          <span class="input-group-text">append</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text">prepend</span>
+          <div class="is-loading">
+            <input class="form-control" placeholder="disabled spinner-border" disabled />
+            <div class="spinner-border"></div>
+          </div>
+          <span class="input-group-text">append</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text">prepend</span>
+          <div class="is-loading">
+            <input class="form-control" placeholder="readonly spinner-border" readonly />
+            <div class="spinner-border"></div>
+          </div>
+          <span class="input-group-text">append</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text">prepend</span>
+          <div class="is-loading">
+            <input class="form-control is-valid" placeholder="is-valid spinner-border" />
+            <div class="spinner-border"></div>
+          </div>
+          <span class="input-group-text">append</span>
+        </div>
+      </div>
+
+      <h2 id="input-group-middle">input-group middle</h2>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <input class="form-control is-valid" placeholder="is-valid" />
+          <span class="input-group-text">middle</span>
+          <input class="form-control is-valid" placeholder="is-valid" />
+        </div>
+      </div>
+
+      <h3 id="input-group-middle-sm">sm</h3>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <div class="is-loading">
+            <input class="form-control" placeholder="spinner-border spinner-border-sm" />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <span class="input-group-text">middle</span>
+          <div class="is-loading">
+            <input class="form-control" placeholder="spinner-border spinner-border-sm" />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <div class="is-loading">
+            <input
+              class="form-control"
+              placeholder="disabled spinner-border spinner-border-sm"
+              disabled
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <span class="input-group-text">middle</span>
+          <div class="is-loading">
+            <input
+              class="form-control"
+              placeholder="disabled spinner-border spinner-border-sm"
+              disabled
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <div class="is-loading">
+            <input
+              class="form-control"
+              placeholder="readonly spinner-border spinner-border-sm"
+              readonly
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <span class="input-group-text">middle</span>
+          <div class="is-loading">
+            <input
+              class="form-control"
+              placeholder="readonly spinner-border spinner-border-sm"
+              readonly
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <div class="is-loading">
+            <input
+              class="form-control is-valid"
+              placeholder="is-valid spinner-border spinner-border-sm"
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <span class="input-group-text">middle</span>
+          <div class="is-loading">
+            <input
+              class="form-control is-valid"
+              placeholder="is-valid spinner-border spinner-border-sm"
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+        </div>
+      </div>
+
+      <h3 id="input-group-middle-lg">lg</h3>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <div class="is-loading">
+            <input class="form-control" placeholder="spinner-border" />
+            <div class="spinner-border"></div>
+          </div>
+          <span class="input-group-text">middle</span>
+          <div class="is-loading">
+            <input class="form-control" placeholder="spinner-border" />
+            <div class="spinner-border"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <div class="is-loading">
+            <input class="form-control" placeholder="disabled spinner-border" disabled />
+            <div class="spinner-border"></div>
+          </div>
+          <span class="input-group-text">middle</span>
+          <div class="is-loading">
+            <input class="form-control" placeholder="disabled spinner-border" disabled />
+            <div class="spinner-border"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <div class="is-loading">
+            <input class="form-control" placeholder="readonly spinner-border" readonly />
+            <div class="spinner-border"></div>
+          </div>
+          <span class="input-group-text">middle</span>
+          <div class="is-loading">
+            <input class="form-control" placeholder="readonly spinner-border" readonly />
+            <div class="spinner-border"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <div class="is-loading">
+            <input class="form-control is-valid" placeholder="is-valid spinner-border" />
+            <div class="spinner-border"></div>
+          </div>
+          <span class="input-group-text">middle</span>
+          <div class="is-loading">
+            <input class="form-control is-valid" placeholder="is-valid spinner-border" />
+            <div class="spinner-border"></div>
+          </div>
+        </div>
+      </div>
+
+      <h2 id="input-group-sm">input-group-sm</h2>
+
+      <div class="mb-3">
+        <div class="input-group input-group-sm">
+          <span class="input-group-text">prepend</span>
+          <input class="form-control is-valid" placeholder="is-valid" />
+        </div>
+      </div>
+
+      <h3 id="input-group-sm-sm">sm</h3>
+
+      <div class="mb-3">
+        <div class="input-group input-group-sm is-loading">
+          <span class="input-group-text">prepend</span>
+          <input class="form-control" placeholder="spinner-border spinner-border-sm" />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group input-group-sm is-loading">
+          <span class="input-group-text">prepend</span>
+          <input
+            class="form-control"
+            placeholder="disabled spinner-border spinner-border-sm"
+            disabled
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group input-group-sm is-loading">
+          <span class="input-group-text">prepend</span>
+          <input
+            class="form-control"
+            placeholder="readonly spinner-border spinner-border-sm"
+            readonly
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group input-group-sm is-loading">
+          <span class="input-group-text">prepend</span>
+          <input
+            class="form-control is-valid"
+            placeholder="is-valid spinner-border spinner-border-sm"
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <h3 id="input-group-sm-lg">lg</h3>
+
+      <div class="mb-3">
+        <div class="input-group input-group-sm is-loading">
+          <span class="input-group-text">prepend</span>
+          <input class="form-control" placeholder="spinner-border" />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group input-group-sm is-loading">
+          <span class="input-group-text">prepend</span>
+          <input class="form-control" placeholder="disabled spinner-border" disabled />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group input-group-sm is-loading">
+          <span class="input-group-text">prepend</span>
+          <input class="form-control" placeholder="readonly spinner-border" readonly />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group input-group-sm is-loading">
+          <span class="input-group-text">prepend</span>
+          <input class="form-control is-valid" placeholder="is-valid spinner-border" />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <h2 id="input-group-lg">input-group-lg</h2>
+
+      <div class="mb-3">
+        <div class="input-group input-group-lg">
+          <span class="input-group-text">prepend</span>
+          <input class="form-control is-valid" placeholder="is-valid" />
+        </div>
+      </div>
+
+      <h3 id="input-group-lg-sm">sm</h3>
+
+      <div class="mb-3">
+        <div class="input-group input-group-lg is-loading">
+          <span class="input-group-text">prepend</span>
+          <input class="form-control" placeholder="spinner-border spinner-border-sm" />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group input-group-lg is-loading">
+          <span class="input-group-text">prepend</span>
+          <input
+            class="form-control"
+            placeholder="disabled spinner-border spinner-border-sm"
+            disabled
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group input-group-lg is-loading">
+          <span class="input-group-text">prepend</span>
+          <input
+            class="form-control"
+            placeholder="readonly spinner-border spinner-border-sm"
+            readonly
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group input-group-lg is-loading">
+          <span class="input-group-text">prepend</span>
+          <input
+            class="form-control is-valid"
+            placeholder="is-valid spinner-border spinner-border-sm"
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <h3 id="input-group-lg-lg">lg</h3>
+
+      <div class="mb-3">
+        <div class="input-group input-group-lg is-loading">
+          <span class="input-group-text">prepend</span>
+          <input class="form-control" placeholder="spinner-border" />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group input-group-lg is-loading">
+          <span class="input-group-text">prepend</span>
+          <input class="form-control" placeholder="disabled spinner-border" disabled />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group input-group-lg is-loading">
+          <span class="input-group-text">prepend</span>
+          <input class="form-control" placeholder="readonly spinner-border" readonly />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group input-group-lg is-loading">
+          <span class="input-group-text">prepend</span>
+          <input class="form-control is-valid" placeholder="is-valid spinner-border" />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <h2 id="prepend2-input2-append2">prepend * 2 + input * 2 + append * 2</h2>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text">prepend1</span>
+          <span class="input-group-text">prepend2</span>
+          <input class="form-control is-valid" />
+          <input class="form-control is-valid" />
+          <span class="input-group-text">append1</span>
+          <span class="input-group-text">append2</span>
+        </div>
+      </div>
+
+      <h3 id="prepend2-input2-append2-sm">sm</h3>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text">prepend1</span>
+          <span class="input-group-text">prepend2</span>
+          <div class="is-loading">
+            <input class="form-control" placeholder="spinner-border spinner-border-sm" />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <div class="is-loading">
+            <input class="form-control" placeholder="spinner-border spinner-border-sm" />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <span class="input-group-text">append1</span>
+          <span class="input-group-text">append2</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text">prepend1</span>
+          <span class="input-group-text">prepend2</span>
+          <div class="is-loading">
+            <input
+              class="form-control"
+              placeholder="disabled spinner-border spinner-border-sm"
+              disabled
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <div class="is-loading">
+            <input
+              class="form-control"
+              placeholder="disabled spinner-border spinner-border-sm"
+              disabled
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <span class="input-group-text">append1</span>
+          <span class="input-group-text">append2</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text">prepend1</span>
+          <span class="input-group-text">prepend2</span>
+          <div class="is-loading">
+            <input
+              class="form-control"
+              placeholder="readonly spinner-border spinner-border-sm"
+              readonly
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <div class="is-loading">
+            <input
+              class="form-control"
+              placeholder="readonly spinner-border spinner-border-sm"
+              readonly
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <span class="input-group-text">append1</span>
+          <span class="input-group-text">append2</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text">prepend1</span>
+          <span class="input-group-text">prepend2</span>
+          <div class="is-loading">
+            <input
+              class="form-control is-valid"
+              placeholder="is-valid spinner-border spinner-border-sm"
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <div class="is-loading">
+            <input
+              class="form-control is-valid"
+              placeholder="is-valid spinner-border spinner-border-sm"
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <span class="input-group-text">append1</span>
+          <span class="input-group-text">append2</span>
+        </div>
+      </div>
+
+      <h3 id="prepend2-input2-append2-lg">lg</h3>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text">prepend1</span>
+          <span class="input-group-text">prepend2</span>
+          <div class="is-loading">
+            <input class="form-control" placeholder="spinner-border" />
+            <div class="spinner-border"></div>
+          </div>
+          <div class="is-loading">
+            <input class="form-control" placeholder="spinner-border" />
+            <div class="spinner-border"></div>
+          </div>
+          <span class="input-group-text">append1</span>
+          <span class="input-group-text">append2</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text">prepend1</span>
+          <span class="input-group-text">prepend2</span>
+          <div class="is-loading">
+            <input class="form-control" placeholder="disabled spinner-border" disabled />
+            <div class="spinner-border"></div>
+          </div>
+          <div class="is-loading">
+            <input class="form-control" placeholder="disabled spinner-border" disabled />
+            <div class="spinner-border"></div>
+          </div>
+          <span class="input-group-text">append1</span>
+          <span class="input-group-text">append2</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text">prepend1</span>
+          <span class="input-group-text">prepend2</span>
+          <div class="is-loading">
+            <input class="form-control" placeholder="readonly spinner-border" readonly />
+            <div class="spinner-border"></div>
+          </div>
+          <div class="is-loading">
+            <input class="form-control" placeholder="readonly spinner-border" readonly />
+            <div class="spinner-border"></div>
+          </div>
+          <span class="input-group-text">append1</span>
+          <span class="input-group-text">append2</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text">prepend1</span>
+          <span class="input-group-text">prepend2</span>
+          <div class="is-loading">
+            <input class="form-control is-valid" placeholder="is-valid spinner-border" />
+            <div class="spinner-border"></div>
+          </div>
+          <div class="is-loading">
+            <input class="form-control is-valid" placeholder="is-valid spinner-border" />
+            <div class="spinner-border"></div>
+          </div>
+          <span class="input-group-text">append1</span>
+          <span class="input-group-text">append2</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.ts"></script>
+  </body>
+</html>

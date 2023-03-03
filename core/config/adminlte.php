@@ -130,11 +130,11 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
-    'usermenu_header_class' => 'bg-primary',
-    'usermenu_image' => false,
-    'usermenu_desc' => false,
-    'usermenu_profile_url' => false,
+    'usermenu_header' => true,
+    'usermenu_header_class' => 'bg-default',
+    'usermenu_image' => true,
+    'usermenu_desc' => true,
+    'usermenu_profile_url' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -153,7 +153,7 @@ return [
     'layout_fixed_sidebar' => null,
     'layout_fixed_navbar' => null,
     'layout_fixed_footer' => null,
-    'layout_dark_mode' => null,
+    'layout_dark_mode' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -252,13 +252,13 @@ return [
     |
     */
 
-    'use_route_url' => false,
-    'dashboard_url' => 'home',
-    'logout_url' => 'logout',
-    'login_url' => 'login',
-    'register_url' => 'register',
-    'password_reset_url' => 'password/reset',
-    'password_email_url' => 'password/email',
+    'use_route_url' => true,
+    'dashboard_url' => 'admin.home',
+    'logout_url' => 'admin.logout',
+    'login_url' => 'admin.login',
+    'register_url' => false,
+    'password_reset_url' => 'admin.password.request',
+    'password_email_url' => 'admin.password.email',
     'profile_url' => false,
 
     /*
@@ -288,101 +288,108 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Menu-Configuration
     |
     */
+    
 
     'menu' => [
         // Navbar items:
-        [
-            'type'         => 'navbar-search',
-            'text'         => 'search',
-            'topnav_right' => true,
-        ],
+       
         [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
+
 
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
+        
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'text'        => 'Dashboard',
+            'route'         => 'admin.dashboard',
+            'icon'        => 'fa fa-tachometer-alt',
+            //'label'       => 4,
+            //'label_color' => 'success',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'text'      => 'New Shipment',
+            'route'     => 'admin.shipments.create',
+            'icon'      => 'fas fa-box',
         ],
-        ['header' => 'account_settings'],
+
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text'      => 'All Shipments',
+            'route'     => 'admin.shipments.index',
+            'icon'      => 'fas fa-boxes',
         ],
+
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
+            'text'      => 'Billing',
+            'route'     => 'admin.invoices.agents',
+            'icon'      => 'fas fa-boxes',
+        ],
+
+        [
+            'text'      => 'DHL Bills',
+            'route'     => 'admin.dhl.index',
+            'icon'      => 'fas fa-file-invoice',
+        ],
+
+        [
+            'text'      => 'Rates',
+            'icon'      => 'fas fa-file-invoice',
+            'submenu'   => [
+                    [
+                        'text'      => 'New Rate',
+                        'route'     => 'admin.rates.create',
+                        'icon'      => false,
+                    ],
+                    
+                    [
+                        'text'      => 'Rate Lists',
+                        'route'     => 'admin.rates.index',
+                        'icon'      => false,
+                    ],   
+
+                    [
+                        'text'      => 'Zones',
+                        'route'     => 'admin.rates.get-zone-schemes',
+                        'icon'      => false,
+                    ],
+
+                    [
+                        'text'      => 'Countries',
+                        'route'     => 'admin.rates.get-countries',
+                        'icon'      => false,
+                    ],
+
+
+            ]
+        ],
+
+        
+
+
+
+        ['header' => 'Options'],
+        [
+            'text' => 'Agents',
+            'route'  => 'admin.agents.index',
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
+            'text' => 'Services',
+            'route'  => 'admin.services.index',
+            'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
+            'text' => 'Companies',
+            'route'  => 'admin.companies.index',
+            'icon' => 'fas fa-fw fa-lock',
         ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+
+        
     ],
 
     /*
@@ -421,7 +428,7 @@ return [
 
     'plugins' => [
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -434,14 +441,25 @@ return [
                     'location' => '//cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js',
                 ],
                 [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.datatables.net/plug-ins/1.13.1/api/sum().js',
+                ],
+                [
                     'type' => 'css',
                     'asset' => false,
                     'location' => '//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
                 ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.datatables.net/plug-ins/1.13.1/sorting/custom-data-source/dom-text.js',
+                ],
+
             ],
         ],
         'Select2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -466,7 +484,7 @@ return [
             ],
         ],
         'Sweetalert2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -489,6 +507,108 @@ return [
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js',
                 ],
             ],
+        ],
+
+
+        'Toastr' => [
+            'active'    => true,
+            'files'     => [
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => 'vendor/toastr/toastr.min.css'
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/toastr/toastr.min.js'
+                ],
+
+            ],
+        ],
+
+        'moment' => [
+            'active'    => true,
+            'files'     => [
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/moment/moment.min.js'
+                ],
+
+            ],
+        ],
+
+        'tempusdominusBootstrap4' => [
+            'active'    => true,
+            'files'     => [
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => 'vendor/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css'
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js'
+                ],
+
+            ],
+        ],
+
+        'bootstrap-datepicker' => [
+            'active'    => true,
+            'files'     => [
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => 'vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css'
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js'
+                ],
+
+            ],
+        ],
+        'clockpicker' => [
+            'active'    => true,
+            'files'     => [
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => 'vendor/clockpicker/bootstrap-clockpicker.min.css'
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/clockpicker/bootstrap-clockpicker.min.js'
+                ],
+
+            ],
+        ],
+
+        'tabledit' => [
+            'active'    => true,
+            'files'     => [
+                [
+                    'type'  => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/tabledit/jquery.tabledit.js'
+                ],
+            ]
+        ],
+        'loading-input-spinner' => [
+            'active'    => true,
+            'files'     => [
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => 'vendor/loading-input-spinner/bootstrap-4/example/bootstrap.css'
+                ]
+
+            ]
         ],
     ],
 

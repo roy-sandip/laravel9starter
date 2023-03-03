@@ -5,6 +5,7 @@
 @section('adminlte_css')
     @stack('css')
     @yield('css')
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
 @stop
 
 @section('classes_body', $layoutHelper->makeBodyClasses())
@@ -52,6 +53,7 @@
 @stop
 
 @section('adminlte_js')
+    <script src="{{asset('js/custom.js')}}"></script>
     @stack('js')
     @yield('js')
 @stop

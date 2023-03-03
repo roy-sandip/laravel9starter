@@ -4,7 +4,7 @@ namespace App\Providers;
 
 // use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
-
+use Gate;
 class AuthServiceProvider extends ServiceProvider
 {
     /**
@@ -25,6 +25,17 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        Gate::before(function($user){
+            if($user->IS_SUPER())
+            {
+                return true;
+            }
+        });
+
+        Gate::define('mainbranch', function($user){
+            return !$user->IS_AGENT();
+        });
+
+
     }
 }
